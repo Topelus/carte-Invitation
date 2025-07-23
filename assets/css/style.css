@@ -1,0 +1,340 @@
+* {
+
+    margin: 0;
+}
+
+/* @font-face { 
+    font-family: 'Valentine';
+    src: url('font\lovely_valentine_script\Lovely Valentine Sans.otf') format('opentype');
+}*/
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+#bloc-carte {
+    display: block;
+}
+
+section {
+    box-sizing: border-box;
+    /* margin: 5px; */
+}
+
+section.carte_section {
+    width: 100%;
+    min-height: 100vh;
+}
+
+section.carte_header {
+    font-family: 'Tangerine','Great Vibes';
+    /* background-image: url('../images/couple-walking-through-vineyard2.png'); */
+    background-image: url('../images/couple-walking-through-vineyard.jpg');
+    background-color: #0b3d2e;
+    /* background-size: 180%; */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    color: #ffffff;
+}
+
+section.carte_header img {
+    position: absolute;
+    left: 20%;
+    top: 0%;
+    width: 30%;
+    transform: translateX(-50%);
+    filter: invert(100%);
+}
+
+section.carte_header h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+/* cs2 */
+section.cs2 {
+    font-family: 'Tangerine';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #0b3d2e;
+    padding: 0px 30px;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+section.cs2 img {
+    width: 30%;
+    margin-bottom: 10px;
+}
+
+section.cs2 p {
+    text-align: center;
+}
+section.cs2 .nomInvite {
+    font-weight: 600;
+    color: #0b3d2e;
+}
+section.cs2 #confirm-presence {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+section.cs2 button {
+    font-family: 'Great Vibes';
+    width: auto;
+    padding: 10px;
+    background: linear-gradient(135deg, #0b3d2e, #0f5a44);
+    color: #FFD700;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(11, 61, 46, 0.3);
+    margin-top: 10px;
+    
+}
+section.cs2 button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 20px rgba(11,61,46,.4);
+}
+section.cs2 .infos-events{
+    width: 70%;
+    display: flex;
+    margin: 10px 0px;
+}
+section.cs2 .infos-events .ico {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* cs2 fin */
+
+/* cs3 */
+section.cs3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    position: relative;
+    background-color: #0b3d2e;
+    font-family: 'Tangerine','Great Vibes';
+    font-size: 2rem;
+}
+
+section.cs3 img {
+    position: absolute;
+    width: 15%;
+}
+
+section.cs3 h1 {
+    text-align: center;
+    color: #FFD700;
+}
+
+.timeline {
+    position: relative;
+    padding: 20px 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #FFD700;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    display: flex;
+    margin: 30px 0;
+    align-items: center;
+    position: relative;
+}
+
+.timeline-item:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+.timeline-time {
+    flex: 1;
+    text-align: right;
+    padding-right: 40px;
+    font-weight: 700;
+    color: #FFD700;
+    font-size: 1.8rem;
+}
+
+.timeline-item:nth-child(odd) .timeline-time {
+    text-align: left;
+    padding-left: 40px;
+    padding-right: 0;
+}
+
+.timeline-content {
+    flex: 1;
+    padding-left: 40px;
+    font-size: 1.8rem;
+    position: relative;
+    color: #FFD700;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    padding-left: 0;
+    padding-right: 40px;
+    text-align: right;
+}
+
+.timeline-content::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    background: #FFD700;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 0 0 4px #0b3d2e, 0 0 0 6px #FFD700;
+}
+
+.timeline-item:nth-child(odd) .timeline-content::before {
+    left: auto;
+    right: -10px;
+}
+
+/* cs3 fin */
+
+/* cs4 */
+section.cs4 {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 30px;
+    position: relative;
+    font-family: 'Tangerine','Great Vibes';
+    overflow: hidden;
+}
+section.cs4 .menu-img {
+    width: 20%;
+    margin-bottom: 10px;
+}
+section.cs4 .menu-floral{
+    position: absolute;
+    width: 300px;
+}
+section.cs4 .menu-floral.f1{
+    right: -15%;
+    top: -18%;
+    transform: rotate(-180deg);
+}
+section.cs4 .menu-floral.f2{
+    left: -25%;
+    bottom: -37%;
+    transform: rotate(-90deg);
+    z-index: -1;
+    border: #0b3d2e;
+}
+
+/* Titre */
+section.cs4 h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    color: #0b3d2e;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Menu */
+.menu-wrapper {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 40px;
+}
+.menu-wrapper > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 100px;
+}
+.menu-wrapper > div  div{
+    /* border: 1px solid #0b3d2e; */
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.menu-wrapper > div  .menu_ico {
+    width: 50%;
+}
+.menu-wrapper > div  .menu_ico img{
+    width: 30%;
+}
+
+/* .menu-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,.08);
+}
+.menu-table th {
+    background: #0b3d2e;
+    color: #FFD700;
+    padding: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.menu-table td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+    font-size: 1rem;
+}
+.menu-table tr:last-child td { border-bottom: none; } */
+
+
+/* cs4 fin */
+
+@media (min-width:640px) {
+    #bloc-carte {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+
+    section.carte_section {
+        width: 50%;
+        height: 100vh;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    /* section.carte_header {} */
+
+}
