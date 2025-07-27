@@ -159,7 +159,7 @@ section.cs3 img {
 section.cs3 h1 {
     text-align: center;
     color: #0b3d2e;
-    font-family: 'great vibes';
+    /* font-family: 'great vibes'; */
 
 }
 
@@ -273,16 +273,16 @@ section.cs4 .menu-floral.f1 {
 }
 
 section.cs4 .menu-floral.f2 {
-    left: -28%;
-    bottom: -27%;
-    transform: rotate(-90deg);
+    left: 50%;
+    transform: translateX(-50%) ;
+    bottom: 0%;
+    /* transform: rotate(-90deg); */
     z-index: -1;
     width: 50%;
 }
 
 /* Titre */
 section.cs4 h1 {
-    font-family: 'Great Vibes', cursive;
     font-size: 3rem;
     color: #0b3d2e;
     margin-bottom: 30px;
@@ -386,6 +386,7 @@ section.cs5 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    font-family: 'Tangerine', 'Great Vibes';
 }
 
 section.cs5 div {
@@ -399,6 +400,7 @@ section.cs5 div {
 
 section.cs5 h1 {
     color: #0b3d2e;
+    font-size: 3rem;
 }
 
 .table-info {
