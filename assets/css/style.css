@@ -28,7 +28,7 @@ section.carte_section {
 }
 
 section.carte_header {
-    font-family: 'Tangerine','Great Vibes';
+    font-family: 'Tangerine', 'Great Vibes';
     /* background-image: url('../images/couple-walking-through-vineyard2.png'); */
     background-image: url('../images/couple-walking-through-vineyard.jpg');
     background-color: #0b3d2e;
@@ -80,10 +80,12 @@ section.cs2 img {
 section.cs2 p {
     text-align: center;
 }
+
 section.cs2 .nomInvite {
     font-weight: 600;
     color: #0b3d2e;
 }
+
 section.cs2 #confirm-presence {
     width: 100%;
     display: flex;
@@ -92,6 +94,7 @@ section.cs2 #confirm-presence {
     align-items: center;
     text-align: center;
 }
+
 section.cs2 button {
     font-family: 'Great Vibes';
     width: auto;
@@ -106,17 +109,20 @@ section.cs2 button {
     letter-spacing: 1px;
     box-shadow: 0 5px 15px rgba(11, 61, 46, 0.3);
     margin-top: 10px;
-    
+
 }
+
 section.cs2 button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 7px 20px rgba(11,61,46,.4);
+    box-shadow: 0 7px 20px rgba(11, 61, 46, .4);
 }
-section.cs2 .infos-events{
+
+section.cs2 .infos-events {
     width: 70%;
     display: flex;
     margin: 10px 0px;
 }
+
 section.cs2 .infos-events .ico {
     width: 50%;
     display: flex;
@@ -134,7 +140,7 @@ section.cs3 {
     padding: 30px;
     position: relative;
     background-color: #0b3d2e;
-    font-family: 'Tangerine','Great Vibes';
+    font-family: 'Tangerine', 'Great Vibes';
     font-size: 2rem;
 }
 
@@ -232,23 +238,27 @@ section.cs4 {
     align-items: center;
     padding: 30px;
     position: relative;
-    font-family: 'Tangerine','Great Vibes';
+    font-family: 'Tangerine', 'Great Vibes';
     overflow: hidden;
 }
+
 section.cs4 .menu-img {
     width: 20%;
     margin-bottom: 10px;
 }
-section.cs4 .menu-floral{
+
+section.cs4 .menu-floral {
     position: absolute;
     width: 300px;
 }
-section.cs4 .menu-floral.f1{
+
+section.cs4 .menu-floral.f1 {
     right: -15%;
     top: -18%;
     transform: rotate(-180deg);
 }
-section.cs4 .menu-floral.f2{
+
+section.cs4 .menu-floral.f2 {
     left: -25%;
     bottom: -37%;
     transform: rotate(-90deg);
@@ -271,14 +281,16 @@ section.cs4 h1 {
     max-width: 800px;
     margin-bottom: 40px;
 }
-.menu-wrapper > div {
+
+.menu-wrapper>div {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
     height: 100px;
 }
-.menu-wrapper > div  div{
+
+.menu-wrapper>div div {
     /* border: 1px solid #0b3d2e; */
     width: 50%;
     display: flex;
@@ -287,35 +299,14 @@ section.cs4 h1 {
     font-size: 1.5rem;
     font-weight: 700;
 }
-.menu-wrapper > div  .menu_ico {
+
+.menu-wrapper>div .menu_ico {
     width: 50%;
 }
-.menu-wrapper > div  .menu_ico img{
+
+.menu-wrapper>div .menu_ico img {
     width: 30%;
 }
-
-/* .menu-table {
-    width: 100%;
-    border-collapse: collapse;
-    background: #fff;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,.08);
-}
-.menu-table th {
-    background: #0b3d2e;
-    color: #FFD700;
-    padding: 15px;
-    font-weight: 600;
-    letter-spacing: 1px;
-}
-.menu-table td {
-    padding: 12px 10px;
-    border-bottom: 1px solid #eee;
-    text-align: center;
-    font-size: 1rem;
-}
-.menu-table tr:last-child td { border-bottom: none; } */
 
 
 /* cs4 fin */
@@ -331,10 +322,20 @@ section.cs4 h1 {
     section.carte_section {
         width: 100%;
         height: 100vh;
-        padding: 20px;
+        padding:30px 150px;
         box-sizing: border-box;
     }
 
-    /* section.carte_header {} */
+    /* cs2 */
+    section.cs2 img {
+        width: 15%;
+        margin-bottom: 10px;
+    }
+
+    /* cs4 */
+    section.cs4 .menu-img {
+        width: 15%;
+        margin-bottom: 10px;
+    }
 
 }
