@@ -25,6 +25,7 @@ section {
 section.carte_section {
     width: 100%;
     min-height: 100vh;
+    padding: 10px 0px;
 }
 
 section.carte_header {
@@ -260,16 +261,17 @@ section.cs4 .menu-floral {
 
 section.cs4 .menu-floral.f1 {
     right: -15%;
-    top: -18%;
+    top: -15%;
     transform: rotate(-180deg);
+    width: 50%;
 }
 
 section.cs4 .menu-floral.f2 {
-    left: -25%;
-    bottom: -37%;
+    left: -28%;
+    bottom: -27%;
     transform: rotate(-90deg);
     z-index: -1;
-    border: #0b3d2e;
+    width: 50%;
 }
 
 /* Titre */
@@ -328,9 +330,18 @@ section.cs4 h1 {
 
     section.carte_section {
         width: 100%;
-        height: 100vh;
-        padding:30px 150px;
+        min-height: 100vh;
+        padding: 30px 150px;
         box-sizing: border-box;
+    }
+
+    section.carte_header img {
+        position: absolute;
+        left: 10%;
+        top: 0%;
+        width: 15%;
+        transform: translateX(-50%);
+        filter: invert(100%);
     }
 
     /* cs2 */
@@ -343,6 +354,18 @@ section.cs4 h1 {
     section.cs4 .menu-img {
         width: 10%;
         margin-bottom: 10px;
+    }
+
+    section.cs4 .menu-floral.f1 {
+        right: -5%;
+        top: -10%;
+        width: 30%;
+    }
+
+    section.cs4 .menu-floral.f2 {
+        left: -15%;
+        bottom: -23%;
+        width: 30%;
     }
 
 }
