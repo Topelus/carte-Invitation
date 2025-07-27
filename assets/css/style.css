@@ -3,14 +3,9 @@
     margin: 0;
 }
 
-/* @font-face { 
-    font-family: 'Valentine';
-    src: url('font\lovely_valentine_script\Lovely Valentine Sans.otf') format('opentype');
-}*/
-
-
 html {
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
+    overflow-x: hidden;
 }
 
 #bloc-carte {
@@ -30,10 +25,8 @@ section.carte_section {
 
 section.carte_header {
     font-family: 'Tangerine', 'Great Vibes';
-    /* background-image: url('../images/couple-walking-through-vineyard2.png'); */
-    background-image: url('../images/couple-walking-through-vineyard.jpg');
-    background-color: #0b3d2e;
-    /* background-size: 180%; */
+    /* background-image: ; */
+    background-image:  url('../images/couple-walking-through-vineyard.jpg'), linear-gradient(#ffffff, #0b3d2e);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -44,9 +37,10 @@ section.carte_header {
     text-align: center;
     position: relative;
     color: #ffffff;
+    background-blend-mode: multiply;
 }
 
-section.carte_header img {
+section.carte_header .f1 {
     position: absolute;
     left: 20%;
     top: 0%;
@@ -54,6 +48,13 @@ section.carte_header img {
     transform: translateX(-50%);
     filter: invert(100%);
 }
+
+/* section.carte_header .fLeur {
+    position: absolute;
+    width: 120%;
+    bottom: -100px;
+} */
+
 
 section.carte_header h1 {
     font-size: 5rem;
@@ -71,6 +72,10 @@ section.cs2 {
     padding: 0px 30px;
     font-size: 2rem;
     font-weight: 700;
+    background-position: bottom right;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    /* background-color: #dfdfdf; */
 }
 
 section.cs2 img {
@@ -97,25 +102,26 @@ section.cs2 #confirm-presence {
 }
 
 section.cs2 button {
-    font-family: 'Great Vibes';
+    font-family: 'Tangerine';
     width: auto;
     padding: 10px;
-    background: linear-gradient(135deg, #0b3d2e, #0f5a44);
-    color: #FFD700;
-    border: none;
-    border-radius: 10px;
+    border: 1px solid #0b3d2e;
+    background-color: #ffffff;
+    color: #0b3d2e;
     font-size: 1.5rem;
     cursor: pointer;
     transition: all 0.3s;
-    letter-spacing: 1px;
-    box-shadow: 0 5px 15px rgba(11, 61, 46, 0.3);
+    /* letter-spacing: 1px; */
     margin-top: 10px;
-
+    font-size: 2rem;
+    font-weight: 700;
 }
 
 section.cs2 button:hover {
     transform: translateY(-2px);
     box-shadow: 0 7px 20px rgba(11, 61, 46, .4);
+    background-color: #0b3d2e;
+    color: #ffffff;
 }
 
 section.cs2 .infos-events {
@@ -141,7 +147,7 @@ section.cs3 {
     padding: 30px;
     position: relative;
     /* background-color: #0b3d2e; */
-    font-family: 'Tangerine', 'Great Vibes';
+    font-family: 'Tangerine';
     font-size: 2rem;
 }
 
@@ -223,10 +229,9 @@ section.cs3 h1 {
     width: 20px;
     height: 20px;
     /* background: #FFD700; */
-    background: #0b3d2e;
+    background: #ffffff;
     border-radius: 50%;
     transform: translateY(-50%);
-    /* box-shadow: 0 0 0 4px #0b3d2e, 0 0 0 6px #FFD700; */
     box-shadow: 0 0 0 4px #0b3d2e, 0 0 0 6px #0b3d2e;
 }
 
@@ -246,7 +251,7 @@ section.cs4 {
     padding: 30px;
     position: relative;
     font-family: 'Tangerine', 'Great Vibes';
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 section.cs4 .menu-img {
@@ -335,7 +340,7 @@ section.cs4 h1 {
         box-sizing: border-box;
     }
 
-    section.carte_header img {
+    section.carte_header .f1 {
         position: absolute;
         left: 10%;
         top: 0%;
@@ -345,6 +350,10 @@ section.cs4 h1 {
     }
 
     /* cs2 */
+    section.cs2 {
+        background-size: 50%;
+    }
+
     section.cs2 img {
         width: 15%;
         margin-bottom: 10px;
@@ -372,54 +381,55 @@ section.cs4 h1 {
 
 /* Section Invitation */
 section.cs5 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
-section.cs5 div{
+
+section.cs5 div {
     width: 100%;
     text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 section.cs5 h1 {
-  color: #0b3d2e;
+    color: #0b3d2e;
 }
 
 .table-info {
-  margin-top: 20px;
+    margin-top: 20px;
 }
 
 .table-number {
-  font-size: 24px;
-  font-weight: bold;
-  color: #ffffff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 60px !important;
-  height: 60px;
-  border-radius: 50%;
-  background-color: #0b3d2e;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px !important;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #0b3d2e;
 }
 
 .plan-salle img {
-  width: 50%;
-  border-radius: 10px;
-  margin-top: 10px;
+    width: 50%;
+    border-radius: 10px;
+    margin-top: 10px;
 }
 
 /* Section Google Maps */
 .maps {
-  padding: 30px;
-  text-align: center;
+    padding: 30px;
+    text-align: center;
 }
 
 .maps h2 {
-  color: #2c3e50;
-  margin-bottom: 15px;
+    color: #2c3e50;
+    margin-bottom: 15px;
 }
