@@ -158,8 +158,9 @@ section.cs3 img {
 
 section.cs3 h1 {
     text-align: center;
-    /* color: #FFD700; */
     color: #0b3d2e;
+    font-family: 'great vibes';
+
 }
 
 .timeline {
