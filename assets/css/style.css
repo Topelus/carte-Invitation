@@ -23,10 +23,15 @@ section.carte_section {
     padding: 10px 0px;
 }
 
+section.break_section {
+    width: 100%;
+    min-height: 50vh;
+}
+
 section.carte_header {
     font-family: 'Tangerine', 'Great Vibes';
     /* background-image: ; */
-    background-image:  url('../images/couple-walking-through-vineyard.jpg'), linear-gradient(#ffffff, #0b3d2e);
+    background-image: url('../images/couple-walking-through-vineyard.jpg'), linear-gradient(#ffffff, #0b3d2e);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -49,12 +54,6 @@ section.carte_header .f1 {
     filter: invert(100%);
 }
 
-/* section.carte_header .fLeur {
-    position: absolute;
-    width: 120%;
-    bottom: -100px;
-} */
-
 
 section.carte_header h1 {
     font-size: 5rem;
@@ -68,6 +67,7 @@ section.cs2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     color: #0b3d2e;
     padding: 0px 30px;
     font-size: 2rem;
@@ -75,7 +75,6 @@ section.cs2 {
     background-position: bottom right;
     background-size: 100%;
     background-repeat: no-repeat;
-    /* background-color: #dfdfdf; */
 }
 
 section.cs2 img {
@@ -92,52 +91,69 @@ section.cs2 .nomInvite {
     color: #0b3d2e;
 }
 
-section.cs2 #confirm-presence {
+
+
+/* cs2 fin */
+
+/* cb1 */
+section.cb1 {
+    background-image: url('../images/groom-puts-wedding-ring-bride-s-finger.jpg'), linear-gradient(#ffffff, #000000);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #ffffff;
+}
+
+section.cb1 #confirm-presence {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    font-size: 1.2rem;
 }
 
-section.cs2 button {
-    font-family: 'Tangerine';
+section.cb1 button {
+    /* font-family: 'Tangerine'; */
     width: auto;
     padding: 10px;
-    border: 1px solid #0b3d2e;
-    background-color: #ffffff;
-    color: #0b3d2e;
-    font-size: 1.5rem;
+    border: 1px solid #ffffff;
+    background-color: #ffffff00;
+    color: #ffffff;
+    font-size: 1.2rem;
     cursor: pointer;
     transition: all 0.3s;
-    /* letter-spacing: 1px; */
     margin-top: 10px;
-    font-size: 2rem;
     font-weight: 700;
 }
 
-section.cs2 button:hover {
+section.cb1 button:hover {
     transform: translateY(-2px);
     box-shadow: 0 7px 20px rgba(11, 61, 46, .4);
-    background-color: #0b3d2e;
     color: #ffffff;
 }
 
-section.cs2 .infos-events {
-    width: 70%;
+section.cb1 .infos-events {
+    width: 65%;
     display: flex;
     margin: 10px 0px;
+    font-size: 2rem;
 }
 
-section.cs2 .infos-events .ico {
+section.cb1 .infos-events .ico {
     width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* cs2 fin */
+/* cb1 fin */
 
 /* cs3 */
 section.cs3 {
@@ -274,7 +290,7 @@ section.cs4 .menu-floral.f1 {
 
 section.cs4 .menu-floral.f2 {
     left: 50%;
-    transform: translateX(-50%) ;
+    transform: translateX(-50%);
     bottom: 0%;
     /* transform: rotate(-90deg); */
     z-index: -1;
@@ -359,6 +375,24 @@ section.cs4 h1 {
         width: 15%;
         margin-bottom: 10px;
     }
+
+    /* cb1 */
+    section.cb1 #confirm-presence {
+        font-size: 1.5rem;
+    }
+
+    section.cb1 button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 7px 20px rgba(11, 61, 46, .4);
+        color: #ffffff;
+    }
+
+    section.cb1 .infos-events {
+        width: 60%;
+        font-size: 4rem;
+    }
+
+    /* cb1 fin */
 
     /* cs4 */
     section.cs4 .menu-img {
