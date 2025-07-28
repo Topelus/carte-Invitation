@@ -116,7 +116,7 @@ section.cb1 #confirm-presence {
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 section.cb1 button {
@@ -263,17 +263,18 @@ section.cs3 h1 {
 section.cs4 {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     padding: 30px;
     position: relative;
     font-family: 'Tangerine', 'Great Vibes';
+    background-color: #0b3d2e;
     /* overflow: hidden; */
 }
 
 section.cs4 .menu-img {
-    width: 20%;
+    width: 50%;
     margin-bottom: 10px;
+    filter: invert(100%);
 }
 
 section.cs4 .menu-floral {
@@ -281,26 +282,24 @@ section.cs4 .menu-floral {
     width: 300px;
 }
 
-section.cs4 .menu-floral.f1 {
+/* section.cs4 .menu-floral.f1 {
     right: -15%;
     top: -15%;
     transform: rotate(-180deg);
     width: 50%;
-}
+/* } */
 
-section.cs4 .menu-floral.f2 {
-    left: 50%;
-    transform: translateX(-50%);
+/* section.cs4 .menu-floral.f2 {
+    left: 0%;
     bottom: 0%;
-    /* transform: rotate(-90deg); */
     z-index: -1;
     width: 50%;
-}
+}  */
 
 /* Titre */
 section.cs4 h1 {
     font-size: 3rem;
-    color: #0b3d2e;
+    color: #ffffff;
     margin-bottom: 30px;
     text-align: center;
 }
@@ -308,111 +307,39 @@ section.cs4 h1 {
 /* Menu */
 .menu-wrapper {
     width: 100%;
-    max-width: 800px;
+    /* max-width: 800px; */
     margin-bottom: 40px;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    align-items: top;
 }
 
 .menu-wrapper>div {
+    /* font-family:'Great Vibes'; */
     display: flex;
-    justify-content: space-between;
+    justify-content: top;
     align-items: center;
-    height: 100px;
+    flex-direction: column;
+    gap: 10px;
     margin-bottom: 10px;
+    font-size: 1.8rem;
 }
-
-.menu-wrapper>div div {
-    /* border: 1px solid #0b3d2e; */
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
+.menu-wrapper>div p{
+    color: #c9cc00;
+    font-size: 3rem;
     font-weight: 700;
 }
 
-.menu-wrapper>div .menu_ico {
-    width: 50%;
-    height: 100%;
+.menu-wrapper>div img {
+    height: 100px;
+    filter: invert(100%);
 }
-
-.menu-wrapper>div .menu_ico img {
-    height: 100%;
+.menu-wrapper>div .menu_plats{
+    text-align: center;
 }
-
-
 /* cs4 fin */
 
-@media (min-width:640px) {
-    #bloc-carte {
-        /* display: flex;
-        align-items: center;
-        flex-wrap: wrap; */
-        margin: 0 auto;
-    }
-
-    section.carte_section {
-        width: 100%;
-        min-height: 100vh;
-        padding: 30px 150px;
-        box-sizing: border-box;
-    }
-
-    section.carte_header .f1 {
-        position: absolute;
-        left: 10%;
-        top: 0%;
-        width: 15%;
-        transform: translateX(-50%);
-        filter: invert(100%);
-    }
-
-    /* cs2 */
-    section.cs2 {
-        background-size: 50%;
-    }
-
-    section.cs2 img {
-        width: 15%;
-        margin-bottom: 10px;
-    }
-
-    /* cb1 */
-    section.cb1 #confirm-presence {
-        font-size: 1.5rem;
-    }
-
-    section.cb1 button:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 7px 20px rgba(11, 61, 46, .4);
-        color: #ffffff;
-    }
-
-    section.cb1 .infos-events {
-        width: 60%;
-        font-size: 4rem;
-    }
-
-    /* cb1 fin */
-
-    /* cs4 */
-    section.cs4 .menu-img {
-        width: 10%;
-        margin-bottom: 10px;
-    }
-
-    section.cs4 .menu-floral.f1 {
-        right: -5%;
-        top: -10%;
-        width: 30%;
-    }
-
-    section.cs4 .menu-floral.f2 {
-        left: -15%;
-        bottom: -23%;
-        width: 30%;
-    }
-
-}
 
 /* Section Invitation */
 section.cs5 {
@@ -469,4 +396,77 @@ section.cs5 h1 {
 .maps h2 {
     color: #2c3e50;
     margin-bottom: 15px;
+}
+
+
+
+@media (min-width:640px) {
+    #bloc-carte {
+        /* display: flex;
+        align-items: center;
+        flex-wrap: wrap; */
+        margin: 0 auto;
+    }
+
+    section.carte_section {
+        width: 100%;
+        min-height: 100vh;
+        padding: 30px 150px;
+        box-sizing: border-box;
+    }
+
+    section.carte_header .f1 {
+        position: absolute;
+        left: 10%;
+        top: 0%;
+        width: 15%;
+        transform: translateX(-50%);
+        filter: invert(100%);
+    }
+
+    /* cs2 */
+    section.cs2 {
+        background-size: 50%;
+    }
+
+    section.cs2 img {
+        width: 15%;
+        margin-bottom: 10px;
+    }
+
+    /* cb1 */
+    section.cb1 #confirm-presence {
+        font-size: 1.5rem;
+    }
+
+    section.cb1 button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 7px 20px rgba(11, 61, 46, .4);
+        color: #ffffff;
+    }
+
+    section.cb1 .infos-events {
+        width: 60%;
+        font-size: 4rem;
+    }
+
+    /* cb1 fin */
+
+    /* cs4 */
+    section.cs4 .menu-img {
+        margin-bottom: 10px;
+    }
+
+    /* section.cs4 .menu-floral.f1 {
+        right: -5%;
+        top: -10%;
+        width: 30%;
+    }
+
+    section.cs4 .menu-floral.f2 {
+        left: -15%;
+        bottom: -23%;
+        width: 30%;
+    } */
+
 }
