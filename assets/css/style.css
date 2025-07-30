@@ -31,7 +31,8 @@ section.break_section {
 section.carte_header {
     font-family: 'Tangerine', 'Great Vibes';
     /* background-image: url('../images/couple-walking-through-vineyard.jpg'), linear-gradient(#ffffff, #0b3d2e); */
-    background-image: url('../images/close-up-rose-isolated.jpg'), linear-gradient(#ffffff, #2b3d0b);
+    /* background-image: url('../images/close-up-rose-isolated.jpg'), linear-gradient(#ffffff, #2b3d0b); */
+    background-image: url('../images/close-up-rose-isolated.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -46,20 +47,12 @@ section.carte_header {
     /* height: 50vh !important; */
 }
 
-/* section.carte_header .f1 {
-    position: absolute;
-    left: 20%;
-    top: 0%;
-    width: 30%;
-    transform: translateX(-50%);
-    filter: invert(100%);
-} */
-
 
 section.carte_header h1 {
     font-size: 5rem;
     font-weight: 700;
     margin-bottom: 40px;
+    text-shadow:#000000 0px 10px 10px;
 }
 
 /* cs2 */
@@ -270,20 +263,20 @@ section.cs3 h1 {
 .timeline-content::before {
     content: '';
     position: absolute;
-    left: -10px;
+    left: -5px;
     top: 50%;
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
     /* background: #FFD700; */
-    background: #ffffff;
+    background: #0b3d2e;
     border-radius: 50%;
     transform: translateY(-50%);
-    box-shadow: 0 0 0 4px #0b3d2e, 0 0 0 6px #0b3d2e;
+    /* box-shadow: 0 0 0 4px #0b3d2e, 0 0 0 6px #0b3d2e; */
 }
 
 .timeline-item:nth-child(odd) .timeline-content::before {
     left: auto;
-    right: -10px;
+    right: -5px;
 }
 
 /* cs3 fin */
@@ -297,7 +290,6 @@ section.cs4 {
     position: relative;
     font-family: 'Tangerine', 'Great Vibes';
     background-color: #0b3d2e;
-    /* overflow: hidden; */
     background-image: url('../images/background.svg');
     background-size: cover;
     background-blend-mode: difference;
