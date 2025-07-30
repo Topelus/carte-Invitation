@@ -30,8 +30,8 @@ section.break_section {
 
 section.carte_header {
     font-family: 'Tangerine', 'Great Vibes';
-    /* background-image: ; */
-    background-image: url('../images/couple-walking-through-vineyard.jpg'), linear-gradient(#ffffff, #0b3d2e);
+    /* background-image: url('../images/couple-walking-through-vineyard.jpg'), linear-gradient(#ffffff, #0b3d2e); */
+    background-image: url('../images/close-up-rose-isolated.jpg'), linear-gradient(#ffffff, #2b3d0b);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -43,22 +43,23 @@ section.carte_header {
     position: relative;
     color: #ffffff;
     background-blend-mode: multiply;
+    /* height: 50vh !important; */
 }
 
-section.carte_header .f1 {
+/* section.carte_header .f1 {
     position: absolute;
     left: 20%;
     top: 0%;
     width: 30%;
     transform: translateX(-50%);
     filter: invert(100%);
-}
+} */
 
 
 section.carte_header h1 {
     font-size: 5rem;
     font-weight: 700;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
 }
 
 /* cs2 */
@@ -72,9 +73,12 @@ section.cs2 {
     padding: 0px 30px;
     font-size: 2rem;
     font-weight: 700;
-    background-position: bottom right;
-    background-size: 100%;
+    /* background-position: bottom right; */
+    background-size:cover;
+    background-position: center;
     background-repeat: no-repeat;
+    /* back */
+    background-image: url('../images/purple-pink-petals-decoration-white-background.jpg');
 }
 
 section.cs2 img {
@@ -162,10 +166,34 @@ section.cs3 {
     justify-content: center;
     padding: 30px;
     position: relative;
-    /* background-color: #0b3d2e; */
     font-family: 'Tangerine';
     font-size: 2rem;
+    /* background-image: url('../images/background.svg'); */
+    /* background-size: cover; */
+    /* background-blend-mode: difference; */
 }
+
+section.cs3 .img-deco {
+    position: absolute;
+    z-index: -1;
+}
+
+
+section.cs3 .img-deco.f1 {
+    right: 0%;
+    bottom: -50px;
+    width: 200px;
+    transform: rotate(50deg);
+}
+
+section.cs3 .img-deco.f2 {
+    left: 0%;
+    top: -50px;
+    width: 200px;
+    transform: rotate(-100deg);
+}
+
+
 
 section.cs3 img {
     position: absolute;
@@ -269,6 +297,10 @@ section.cs4 {
     font-family: 'Tangerine', 'Great Vibes';
     background-color: #0b3d2e;
     /* overflow: hidden; */
+    background-image: url('../images/background.svg');
+    background-size: cover;
+    background-blend-mode: difference;
+    background-repeat: no-repeat;
 }
 
 section.cs4 .menu-img {
@@ -277,24 +309,6 @@ section.cs4 .menu-img {
     filter: invert(100%);
 }
 
-section.cs4 .menu-floral {
-    position: absolute;
-    width: 300px;
-}
-
-/* section.cs4 .menu-floral.f1 {
-    right: -15%;
-    top: -15%;
-    transform: rotate(-180deg);
-    width: 50%;
-/* } */
-
-/* section.cs4 .menu-floral.f2 {
-    left: 0%;
-    bottom: 0%;
-    z-index: -1;
-    width: 50%;
-}  */
 
 /* Titre */
 section.cs4 h1 {
@@ -313,10 +327,10 @@ section.cs4 h1 {
     display: flex;
     justify-content: space-around;
     align-items: top;
+    flex-direction: column;
 }
 
 .menu-wrapper>div {
-    /* font-family:'Great Vibes'; */
     display: flex;
     justify-content: top;
     align-items: center;
@@ -325,7 +339,8 @@ section.cs4 h1 {
     margin-bottom: 10px;
     font-size: 1.8rem;
 }
-.menu-wrapper>div p{
+
+.menu-wrapper>div p {
     color: #c9cc00;
     font-size: 3rem;
     font-weight: 700;
@@ -335,9 +350,11 @@ section.cs4 h1 {
     height: 100px;
     filter: invert(100%);
 }
-.menu-wrapper>div .menu_plats{
+
+.menu-wrapper>div .menu_plats {
     text-align: center;
 }
+
 /* cs4 fin */
 
 
@@ -426,7 +443,7 @@ section.cs5 h1 {
 
     /* cs2 */
     section.cs2 {
-        background-size: 50%;
+        /* background-size: 50%; */
     }
 
     section.cs2 img {
@@ -452,21 +469,58 @@ section.cs5 h1 {
 
     /* cb1 fin */
 
+    /* cs3 */
+
+    section.cs3 .img-deco.f1 {
+        right: 0%;
+        bottom: -50px;
+        width: 300px;
+        transform: rotate(50deg);
+    }
+
+    section.cs3 .img-deco.f2 {
+        left: 0%;
+        top: -50px;
+        width: 300px;
+        transform: rotate(-100deg);
+    }
+
+
+    /* cs3 fin */
+
     /* cs4 */
     section.cs4 .menu-img {
         margin-bottom: 10px;
     }
 
-    /* section.cs4 .menu-floral.f1 {
-        right: -5%;
-        top: -10%;
-        width: 30%;
+    /* Menu */
+    .menu-wrapper {
+        flex-direction: row;
     }
 
-    section.cs4 .menu-floral.f2 {
-        left: -15%;
-        bottom: -23%;
-        width: 30%;
+    /* .menu-wrapper>div {
+        display: flex;
+        justify-content: top;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 10px;
+        font-size: 1.8rem;
+    }
+
+    .menu-wrapper>div p {
+        color: #c9cc00;
+        font-size: 3rem;
+        font-weight: 700;
+    }
+
+    .menu-wrapper>div img {
+        height: 100px;
+        filter: invert(100%);
+    }
+
+    .menu-wrapper>div .menu_plats {
+        text-align: center;
     } */
 
 }
