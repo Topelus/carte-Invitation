@@ -74,11 +74,12 @@ section.cs2 {
     font-size: 2rem;
     font-weight: 700;
     /* background-position: bottom right; */
-    background-size:cover;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     /* back */
     background-image: url('../images/purple-pink-petals-decoration-white-background.jpg');
+    background-blend-mode: multiply;
 }
 
 section.cs2 img {
@@ -415,6 +416,40 @@ section.cs5 h1 {
     margin-bottom: 15px;
 }
 
+/* cs6 */
+
+section.cs6 {
+    background-image: url('../images/top-view-flowers-with-copy-space.jpg');
+    background-size: cover;
+    position: relative;
+}
+
+section.cs6 .thanks-box {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+}
+
+section.cs6 .thanks-box h1 {
+    font-family: 'Great Vibes';
+    font-size: 25vh;
+    color: rgb(70, 70, 70);
+}
+section.cs6 .thanks-box p {
+    font-family: 'Tangerine', 'Great Vibes';
+    font-size: 7vh;
+    color: rgb(70, 70, 70);
+    text-align: center;
+}
+
+/* cs6 fin */
+
 
 
 @media (min-width:640px) {
@@ -432,19 +467,18 @@ section.cs5 h1 {
         box-sizing: border-box;
     }
 
-    section.carte_header .f1 {
+    /* section.carte_header .f1 {
         position: absolute;
         left: 10%;
         top: 0%;
         width: 15%;
         transform: translateX(-50%);
         filter: invert(100%);
-    }
+    } */
 
     /* cs2 */
-    section.cs2 {
-        /* background-size: 50%; */
-    }
+    /* section.cs2 {
+    } */
 
     section.cs2 img {
         width: 15%;
@@ -522,5 +556,20 @@ section.cs5 h1 {
     .menu-wrapper>div .menu_plats {
         text-align: center;
     } */
+
+    /* cs6 */
+
+    section.cs6 .thanks-box {
+        top: 25%;
+        left: 0%;
+    }
+
+    section.cs6 .thanks-box h1 {
+        font-family: 'Great Vibes';
+        font-size: 25vh;
+        color: rgb(70, 70, 70);
+    }
+
+    /* cs6 fin */
 
 }
