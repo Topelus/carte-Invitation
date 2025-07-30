@@ -427,7 +427,7 @@ section.cs6 {
 }
 
 section.cs6 .thanks-box {
-    width: 50%;
+    width: 80%;
     height: 50%;
     display: flex;
     justify-content: center;
@@ -435,17 +435,18 @@ section.cs6 .thanks-box {
     flex-direction: column;
     position: absolute;
     top: 25%;
-    left: 25%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 section.cs6 .thanks-box h1 {
     font-family: 'Great Vibes';
-    font-size: 25vh;
+    font-size: 25vw;
     color: rgb(70, 70, 70);
 }
 section.cs6 .thanks-box p {
     font-family: 'Tangerine', 'Great Vibes';
-    font-size: 7vh;
+    font-size: 8vh;
     color: rgb(70, 70, 70);
     text-align: center;
 }
@@ -563,7 +564,7 @@ section.cs6 .thanks-box p {
 
     section.cs6 .thanks-box {
         top: 25%;
-        left: 0%;
+        left: 20%;
     }
 
     section.cs6 .thanks-box h1 {
