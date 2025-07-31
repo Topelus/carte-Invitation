@@ -54,10 +54,12 @@
                 <div class="ico" style="border-right: 2px solid #ffffff;;">15 juin</div>
                 <div class="ico">15:00</div>
             </div>
+            <div class="event-location"><img src="assets/images/icones/wedding-location_7565257.png" alt=""><a
+                    href="#maps">Le Pavillon du lac</a></div>
             <div id="confirm-presence">
                 <p>Merci de confirmer votre présence avant le 1er juin 2024.</p>
                 <form class="rsvp-form" id="rsvpForm">
-                    <button type="submit">Confirmer ma présence</button>
+                    <button type="submit">Confirmez votre présence</button>
                 </form>
             </div>
 
@@ -72,19 +74,23 @@
                     <div class="timeline-content">Accueil des invités<br><br><span> 14h30 </span></div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-time"><img src="assets/images/icones/engagement-ring_5182982.png" alt="" srcset="" class="ico"></div>
+                    <div class="timeline-time"><img src="assets/images/icones/engagement-ring_5182982.png" alt=""
+                            srcset="" class="ico"></div>
                     <div class="timeline-content">Célébration de mariage<br><br><span> 15h00 </span></div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-time"><img src="assets/images/icones/juice_5887253.png" alt="" srcset="" class="ico"></div>
+                    <div class="timeline-time"><img src="assets/images/icones/juice_5887253.png" alt="" srcset=""
+                            class="ico"></div>
                     <div class="timeline-content">Cocktails & photos <br><br><span> 16h30 </span></div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-time"><img src="assets/images/icones/food_13157228.png" alt="" srcset="" class="ico"></div>
+                    <div class="timeline-time"><img src="assets/images/icones/food_13157228.png" alt="" srcset=""
+                            class="ico"></div>
                     <div class="timeline-content">Réception<br><br><span> 19h00 </span></div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-time"><img src="assets/images/icones/decoration_5295142.png" alt="" srcset="" class="ico"></div>
+                    <div class="timeline-time"><img src="assets/images/icones/decoration_5295142.png" alt="" srcset=""
+                            class="ico"></div>
                     <div class="timeline-content">Ouverture du bal <br><br><span> 22h00 </span></div>
                 </div>
                 <div class="timeline-item">
@@ -97,8 +103,8 @@
         <section class="carte_section cs4">
             <!-- <img src="assets/images/icones/cutlery_17407893.png" alt="" class="menu-img" srcset=""> -->
             <img src="assets/images/fleur8.svg" alt="" class="menu-img" srcset="">
-            <!-- <img src="assets/images/fleur7.svg" class="menu-floral f1" alt="">
-        <img src="assets/images/fleur7.svg" class="menu-floral f2" alt=""> -->
+            <img src="assets/images/fleur10.svg" class="menu-floral f1" alt="">
+        <img src="assets/images/fleur10.svg" class="menu-floral f2" alt="">
 
             <h1>Menu</h1>
 
@@ -143,12 +149,20 @@
         </section>
 
         <!-- ✅ Google Maps -->
-        <section class="maps">
+        <section class="maps" id="maps">
             <h2>Lieu de l'Événement</h2>
             <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2988.6935719053513!2d2.3574981734392453!3d6.486502323595386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1024a9fa79055391%3A0x284bbd17e08ddab6!2sLe%20Pavillon%20Du%20Lac!5e1!3m2!1sfr!2sbj!4v1753622912618!5m2!1sfr!2sbj"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2988.6935719053513!2d2.3574981734392453!3d6.486502323595386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1024a9fa79055391%3A0x284bbd17e08ddab6!2sLe%20Pavillon%20Du%20Lac!5e1!3m2!1sfr!2sbj!4v1753622912618!5m2!1sfr!2sbj&t=m"
                 width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            <!-- <iframe width="100%" height="450" style="border:0;" loading="lazy" allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps?q=6.486502323595386,2.3574981734392453&t=m&z=16&output=embed">
+            </iframe> -->
+
+
+
         </section>
 
 
@@ -163,5 +177,19 @@
     </div>
 
 </body>
+<script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, {
+        threshold: 0.2
+    });
+
+    const items = document.querySelectorAll('section');
+    items.forEach(item => observer.observe(item));
+</script>
 
 </html>

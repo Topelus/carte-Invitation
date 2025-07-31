@@ -6,6 +6,7 @@
 html {
     /* scroll-behavior: smooth; */
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 #bloc-carte {
@@ -15,11 +16,21 @@ html {
 section {
     box-sizing: border-box;
     /* margin: 5px; */
+    opacity: 0;
+    transform: translateY(30px);
+    /* Animation de bas en haut */
+    transition: all 0.8s ease;
+    /* background-color: #f1f5f4; */
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 section.carte_section {
     width: 100%;
-    min-height: 100vh;
+    min-height: 90vh;
     padding: 10px 0px;
 }
 
@@ -44,7 +55,7 @@ section.carte_header {
     position: relative;
     color: #ffffff;
     background-blend-mode: multiply;
-    /* height: 50vh !important; */
+    min-height: 100vh !important;
 }
 
 
@@ -71,7 +82,8 @@ section.cs2 {
     background-position: center;
     background-repeat: no-repeat;
     /* back */
-    background-image: url('../images/purple-pink-petals-decoration-white-background.jpg');
+    /* background-image: url('../images/purple-pink-petals-decoration-white-background.jpg'); */
+    background-image: url('../images/purple-pink-petals-decoration-white-background.png');
     background-blend-mode: multiply;
 }
 
@@ -107,6 +119,27 @@ section.cb1 {
     color: #ffffff;
 }
 
+section.cb1 .event-location {
+    display: flex;
+    align-items: center;
+}
+
+section.cb1 img {
+    filter: invert(100%);
+    height: 40px;
+    width: auto;
+}
+
+section.cb1 a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.3rem;
+}
+
+section.cb1 a:hover {
+    color: #b9b9b9;
+}
+
 section.cb1 #confirm-presence {
     width: 100%;
     display: flex;
@@ -133,7 +166,7 @@ section.cb1 button {
 
 section.cb1 button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 7px 20px rgba(11, 61, 46, .4);
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.4);
     color: #ffffff;
 }
 
@@ -329,12 +362,32 @@ section.cs4 {
     background-size: cover;
     background-blend-mode: difference;
     background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 section.cs4 .menu-img {
     width: 50%;
     margin-bottom: 10px;
     filter: invert(100%);
+}
+
+section.cs4 .menu-floral {
+    position: absolute;
+    z-index: -1;
+}
+
+section.cs4 .menu-floral.f1 {
+    right: -40%;
+    bottom: 50%;
+    width: 80%;
+    transform: rotate(90deg);
+}
+
+section.cs4 .menu-floral.f2 {
+    left: -40%;
+    top: 50%;
+    width: 80%;
+    transform: rotate(-90deg);
 }
 
 
@@ -449,6 +502,7 @@ section.cs6 {
     background-image: url('../images/top-view-flowers-with-copy-space.jpg');
     background-size: cover;
     position: relative;
+    min-height: 90vh !important;
 }
 
 section.cs6 .thanks-box {
@@ -483,27 +537,14 @@ section.cs6 .thanks-box p {
 
 @media (min-width:640px) {
     #bloc-carte {
-        /* display: flex;
-        align-items: center;
-        flex-wrap: wrap; */
         margin: 0 auto;
     }
 
     section.carte_section {
         width: 100%;
-        min-height: 100vh;
         padding: 30px 150px;
         box-sizing: border-box;
     }
-
-    /* section.carte_header .f1 {
-        position: absolute;
-        left: 10%;
-        top: 0%;
-        width: 15%;
-        transform: translateX(-50%);
-        filter: invert(100%);
-    } */
 
     /* cs2 */
     /* section.cs2 {
@@ -565,44 +606,34 @@ section.cs6 .thanks-box p {
         flex-direction: row;
     }
 
-    /* .menu-wrapper>div {
-        display: flex;
-        justify-content: top;
-        align-items: center;
-        flex-direction: column;
-        gap: 10px;
-        margin-bottom: 10px;
-        font-size: 1.8rem;
+    section.cs4 .menu-floral.f1 {
+        right: -10%;
+        bottom: -5%;
+        width: 40%;
+        transform: rotate(0deg);
     }
 
-    .menu-wrapper>div p {
-        color: #c9cc00;
-        font-size: 3rem;
-        font-weight: 700;
+    section.cs4 .menu-floral.f2 {
+        left: -10%;
+        top: -5%;
+        width: 40%;
+        transform: rotate(-180deg);
     }
-
-    .menu-wrapper>div img {
-        height: 100px;
-        filter: invert(100%);
-    }
-
-    .menu-wrapper>div .menu_plats {
-        text-align: center;
-    } */
-
-    /* cs6 */
-
-    section.cs6 .thanks-box {
-        top: 25%;
-        left: 20%;
-    }
-
-    section.cs6 .thanks-box h1 {
-        font-family: 'Great Vibes';
-        font-size: 25vh;
-        color: rgb(70, 70, 70);
-    }
-
-    /* cs6 fin */
-
 }
+
+*/
+/* cs6 */
+
+section.cs6 .thanks-box {
+    top: 25%;
+    left: 20%;
+}
+
+section.cs6 .thanks-box h1 {
+    font-family: 'Great Vibes';
+    font-size: 25vh;
+    color: rgb(70, 70, 70);
+}
+
+/* cs6 fin */
+
