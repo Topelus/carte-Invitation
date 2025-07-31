@@ -52,7 +52,7 @@ section.carte_header h1 {
     font-size: 5rem;
     font-weight: 700;
     margin-bottom: 40px;
-    text-shadow:#000000 0px 10px 10px;
+    text-shadow: #000000 0px 10px 10px;
 }
 
 /* cs2 */
@@ -243,7 +243,8 @@ section.cs3 h1 {
     align-items: center;
     justify-content: flex-end;
 }
-.timeline-time .ico{
+
+.timeline-time .ico {
     height: 90px;
     width: auto;
 }
@@ -264,10 +265,34 @@ section.cs3 h1 {
     color: #0b3d2e;
 }
 
+.timeline-content span {
+    position: relative;
+    left: -40px;
+    top: -30px;
+}
+
+.timeline-item:nth-child(odd) .timeline-content span {
+    right: -40px;
+    left: auto;
+}
+
+.timeline-content span::before {
+    content: "";
+    width: 70px;
+    border-top: #0b3d2e 1px solid;
+    float: left;
+    margin-top: 15px;
+}
+
+
 .timeline-item:nth-child(odd) .timeline-content {
     padding-left: 0;
     padding-right: 40px;
     text-align: right;
+}
+
+.timeline-item:nth-child(odd) .timeline-content span::before {
+    float: right;
 }
 
 .timeline-content::before {
@@ -444,6 +469,7 @@ section.cs6 .thanks-box h1 {
     font-size: 25vw;
     color: rgb(70, 70, 70);
 }
+
 section.cs6 .thanks-box p {
     font-family: 'Tangerine', 'Great Vibes';
     font-size: 8vh;
@@ -520,6 +546,10 @@ section.cs6 .thanks-box p {
         top: -50px;
         width: 300px;
         transform: rotate(-100deg);
+    }
+
+    .timeline-content span::before {
+        width: 140px;
     }
 
 
