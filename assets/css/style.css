@@ -239,7 +239,6 @@ section.cs3 img {
 section.cs3 h1 {
     text-align: center;
     color: #0b3d2e;
-    /* font-family: 'great vibes'; */
     font-size: 2.6rem;
     font-weight: 700;
 
@@ -532,12 +531,19 @@ section.cs6 .thanks-box h1 {
     font-size: 25vw;
     color: rgb(70, 70, 70);
 }
+
 section.cs6 .dons {
-    width: 100%;
+    width: 450px;
     text-align: center;
     color: rgb(70, 70, 70);
     margin-top: 20%;
+    margin-bottom: 10px;
     font-weight: bold;
+    padding: 3px;
+    background-color: #cecece4d;
+    border-radius: 20px;
+    /* backdrop-filter: blur(5px);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.616); */
 }
 
 section.cs6 .thanks-box p {
