@@ -619,21 +619,19 @@ section.cs6 .thanks-box p {
         width: 40%;
         transform: rotate(-180deg);
     }
+
+    /* cs6 */
+
+    section.cs6 .thanks-box {
+        top: 25%;
+        left: 20%;
+    }
+
+    section.cs6 .thanks-box h1 {
+        font-family: 'Great Vibes';
+        font-size: 10vw;
+        color: rgb(70, 70, 70);
+    }
+
+    /* cs6 fin */
 }
-
-*/
-/* cs6 */
-
-section.cs6 .thanks-box {
-    top: 25%;
-    left: 20%;
-}
-
-section.cs6 .thanks-box h1 {
-    font-family: 'Great Vibes';
-    font-size: 35vw;
-    color: rgb(70, 70, 70);
-}
-
-/* cs6 fin */
-
