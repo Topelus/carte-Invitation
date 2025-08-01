@@ -107,7 +107,8 @@ section.cs2 .nomInvite {
 
 /* cb1 */
 section.cb1 {
-    background-image: url('../images/groom-puts-wedding-ring-bride-s-finger.jpg'), linear-gradient(#ffffff, #000000);
+    /* background-image: url('../images/groom-puts-wedding-ring-bride-s-finger.jpg'), linear-gradient(#ffffff, #000000); */
+    background-image: url('../images/nice-bouquet-with-white-pink-flowers.jpg'), linear-gradient(#ffffff, #474747);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
