@@ -123,9 +123,12 @@ section.cb1 .event-location {
 }
 
 section.cb1 img {
-    filter: invert(100%);
+    /* filter: invert(100%); */
     height: 40px;
     width: auto;
+    filter: invert(100%);
+    /* background-color: blue;
+    background-blend-mode: multiply; */
 }
 
 section.cb1 a {
@@ -194,11 +197,17 @@ section.cs3 {
     font-family: 'Tangerine';
     font-size: 2rem;
     overflow: hidden;
-    background-image: url('../images/fleur12.png');
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
 }
+
+/* section.cs3::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("../images/fleur12.png") center no-repeat;
+    background-size: 90%;
+    opacity: 0.5;
+    z-index: -1;
+} */
 
 section.cs3 .img-deco {
     position: absolute;
@@ -295,6 +304,7 @@ section.cs3 h1 {
     position: relative;
     /* color: #FFD700; */
     color: #0b3d2e;
+    font-weight: 700;
 }
 
 .timeline-content span {
@@ -522,12 +532,20 @@ section.cs6 .thanks-box h1 {
     font-size: 25vw;
     color: rgb(70, 70, 70);
 }
+section.cs6 .dons {
+    width: 100%;
+    text-align: center;
+    color: rgb(70, 70, 70);
+    margin-top: 20%;
+    font-weight: bold;
+}
 
 section.cs6 .thanks-box p {
     font-family: 'Tangerine', 'Great Vibes';
-    font-size: 8vh;
+    font-size: 30px;
     color: rgb(70, 70, 70);
     text-align: center;
+    font-weight: 700;
 }
 
 /* cs6 fin */
@@ -593,9 +611,12 @@ section.cs6 .thanks-box p {
 
     /* cs3 */
     section.cs3 {
-    padding: 50px 30px;
-    background-size: 50%;
-}
+        padding: 50px 30px;
+    }
+
+    section.cs3::before {
+        background-size: 50%;
+    }
 
     section.cs3 .img-deco.f1 {
         right: 0%;
