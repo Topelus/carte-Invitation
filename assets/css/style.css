@@ -61,11 +61,17 @@ section.carte_header h1 {
     top: 53%;
     transform: translate(-50%, -50%);
 }
+section.carte_header p {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
 
 /* cs2 */
 section.cs2 {
     font-family: 'Tangerine';
-    display: flex;
+    /* display: flex; */
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -511,47 +517,38 @@ section.cs6 {
     background-size: cover;
     position: relative;
     min-height: 90vh !important;
+    display: flex;
+    align-items: center;
 }
 
 section.cs6 .thanks-box {
-    width: 80%;
-    height: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
 }
 
 section.cs6 .thanks-box h1 {
-    font-family: 'Great Vibes';
+    font-family: 'Great Vibes', ;
     font-size: 25vw;
     color: rgb(70, 70, 70);
+    white-space: nowrap;
 }
 
-section.cs6 .dons {
-    width: 450px;
-    text-align: center;
-    color: rgb(70, 70, 70);
-    margin-top: 20%;
-    margin-bottom: 10px;
-    font-weight: bold;
-    padding: 3px;
-    background-color: #cecece4d;
-    border-radius: 20px;
-    /* backdrop-filter: blur(5px);
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.616); */
-}
+/* section.cs6 .dons {
+} */
 
 section.cs6 .thanks-box p {
-    font-family: 'Tangerine', 'Great Vibes';
-    font-size: 30px;
+    /* font-family:'Poppins', sans-serif; */
+    font-size: 20px;
     color: rgb(70, 70, 70);
-    text-align: center;
     font-weight: 700;
+}
+section.cs6 .thanks-box .noms_m{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section.cs6 .thanks-box .noms_m img{
+    width: 20px;
 }
 
 /* cs6 fin */
@@ -670,16 +667,18 @@ section.cs6 .thanks-box p {
     }
 
     /* cs6 */
-
     section.cs6 .thanks-box {
-        top: 25%;
-        left: 20%;
+    width: auto;
+}
+    section.cs6 {
+        align-items: center;
+        justify-content:left;
     }
 
     section.cs6 .thanks-box h1 {
         font-family: 'Great Vibes';
         font-size: 10vw;
-        color: rgb(70, 70, 70);
+        color: #464646;
     }
 
     /* cs6 fin */

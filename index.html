@@ -12,13 +12,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
-
-
-
     <link rel="stylesheet" href="assets/css/style.css">
-
-
-
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500;700&display=swap"
         rel="stylesheet">
 
@@ -29,7 +23,23 @@
     <div id="bloc-carte">
         <section class="carte_section carte_header">
 
-            <!-- <img src="assets/images/fleur-fond.png" class="f1" alt="" srcset=""> -->
+            <svg width="500" height="500" viewBox="0 0 300 300">
+  <!-- Cercle invisible qui servira de chemin -->
+  <defs>
+    <path id="cercle" d="M 150,150 m -100,0 a 100,100 0 1,1 200,0 a 100,100 0 1,1 -200,0"/>
+  </defs>
+
+  <!-- Texte qui suit le chemin -->
+  <text font-size="20" fill="black">
+    <textPath href="#cercle" startOffset="50%" text-anchor="middle">
+      Nous allons nous dire oui
+    </textPath>
+  </text>
+</svg>
+
+
+
+
             <h1>Camélia <br> & <br> Derick</h1>
         </section>
         <section class="carte_section cs2">
@@ -56,7 +66,7 @@
             </div>
             <div class="event-location">
                 <img src="assets/images/icones/wedding-location_7565257.png" alt=""><strong>
-                <a href="#maps">Le Pavillon du lac</a></strong>
+                    <a href="#maps">Le Pavillon du lac</a></strong>
             </div>
             <div id="confirm-presence">
                 <p>Merci de confirmer votre présence avant le 1er juin 2024.</p>
@@ -72,7 +82,8 @@
             <h1>Programme</h1>
             <div class=" timeline">
                 <div class="timeline-item">
-                    <div class="timeline-time"><img src="assets/images/icones/wedding-arch_5094840.png" alt="" srcset="" class="ico"></div>
+                    <div class="timeline-time"><img src="assets/images/icones/wedding-arch_5094840.png" alt="" srcset=""
+                            class="ico"></div>
                     <div class="timeline-content">Accueil des invités<br><br><span> 14h30 </span></div>
                 </div>
                 <div class="timeline-item">
@@ -91,8 +102,10 @@
                     <div class="timeline-content">Réception<br><br><span> 19h00 </span></div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-time"><img src="assets/images/icones/decoration_5295142.png" alt="" srcset=""
-                            class="ico"></div>
+                    <div class="timeline-time">
+                        <!-- <img src="assets/images/icones/decoration_5295142.png" alt="" srcset=""
+                            class="ico"> -->
+                    </div>
                     <div class="timeline-content">Fin de soirée<br><br><span> 22h00 </span></div>
                 </div>
                 <!-- <div class="timeline-item">
@@ -163,7 +176,8 @@
             <div class="thanks-box">
                 <p class="dons">Faites vos dons aux numéros:+229 0147777941</p>
                 <h1>Merci !</h1>
-                <p>Camélia AHANHANZO <br>& <br> Derick NGOUH</p>
+                <p class="noms_m"> <span>Camélia AHANHANZO</span> <img src="assets/images/icones/coeur.svg" alt=""
+                        srcset=""> <span>Derick NGOUH</span></p>
             </div>
         </section>
 
