@@ -39,10 +39,6 @@ section.carte_header {
     background-size: 1000px;
     background-position: center;
     background-repeat: no-repeat;
-    /* display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column; */
     text-align: center;
     color: #0b3d2e;
     background-blend-mode: multiply;
@@ -55,16 +51,20 @@ section.carte_header h1 {
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 40px;
-    /* text-shadow: #000000 0px 10px 10px; */
+    text-shadow: #000000 0px 10px 10px;
     position: absolute;
     left: 47%;
     top: 53%;
     transform: translate(-50%, -50%);
 }
-section.carte_header p {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 40px;
+
+section.carte_header svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-53%, -50%);
+    width: 350px;
+    height: 350px;
 }
 
 /* cs2 */
@@ -508,6 +508,9 @@ section.cs5 h1 {
 .maps h2 {
     color: #2c3e50;
     margin-bottom: 15px;
+    font-family: "Tangerine", "Great Vibes";
+    font-weight: 700;
+    font-size: 40px;
 }
 
 /* cs6 */
@@ -527,7 +530,7 @@ section.cs6 .thanks-box {
 }
 
 section.cs6 .thanks-box h1 {
-    font-family: 'Great Vibes', ;
+    font-family: 'Great Vibes';
     font-size: 25vw;
     color: rgb(70, 70, 70);
     white-space: nowrap;
@@ -542,18 +545,27 @@ section.cs6 .thanks-box p {
     color: rgb(70, 70, 70);
     font-weight: 700;
 }
-section.cs6 .thanks-box .noms_m{
+
+section.cs6 .thanks-box .dons {
+    /* border: 1px solid #0b3d2e; */
+    padding: 3px;
+    border-radius: 20px;
+    /* box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.555); */
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+section.cs6 .thanks-box .noms_m {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-section.cs6 .thanks-box .noms_m img{
+
+section.cs6 .thanks-box .noms_m img {
     width: 20px;
 }
 
 /* cs6 fin */
-
-
 
 @media (min-width:640px) {
     #bloc-carte {
@@ -581,6 +593,12 @@ section.cs6 .thanks-box .noms_m img{
         top: 53%;
         transform: translate(-50%, -50%);
     }
+
+    section.carte_header svg {
+        width: 500px;
+        height: 500px;
+    }
+
 
     /* cs2 */
 
@@ -668,11 +686,12 @@ section.cs6 .thanks-box .noms_m img{
 
     /* cs6 */
     section.cs6 .thanks-box {
-    width: auto;
-}
+        width: auto;
+    }
+
     section.cs6 {
         align-items: center;
-        justify-content:left;
+        justify-content: left;
     }
 
     section.cs6 .thanks-box h1 {

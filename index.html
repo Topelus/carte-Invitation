@@ -24,22 +24,15 @@
         <section class="carte_section carte_header">
 
             <svg width="500" height="500" viewBox="0 0 300 300">
-  <!-- Cercle invisible qui servira de chemin -->
-  <defs>
-    <path id="cercle" d="M 150,150 m -100,0 a 100,100 0 1,1 200,0 a 100,100 0 1,1 -200,0"/>
-  </defs>
-
-  <!-- Texte qui suit le chemin -->
-  <text font-size="20" fill="black">
-    <textPath href="#cercle" startOffset="50%" text-anchor="middle">
-      Nous allons nous dire oui
-    </textPath>
-  </text>
-</svg>
-
-
-
-
+                <defs>
+                    <path id="cercle" d="M 20,130 A 130,100 0 0,1 230,60" />
+                </defs>
+                <text font-size="30" fill="black">
+                    <textPath href="#cercle" startOffset="50%" text-anchor="middle">
+                        Nous allons nous dire oui
+                    </textPath>
+                </text>
+            </svg>
             <h1>Camélia <br> & <br> Derick</h1>
         </section>
         <section class="carte_section cs2">
@@ -164,7 +157,7 @@
 
         <!-- ✅ Google Maps -->
         <section class="break_section maps" id="maps">
-            <h2>Lieu de l'Événement</h2>
+            <h2>Lieu de l'événement</h2>
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2988.6935719053513!2d2.3574981734392453!3d6.486502323595386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1024a9fa79055391%3A0x284bbd17e08ddab6!2sLe%20Pavillon%20Du%20Lac!5e1!3m2!1sfr!2sbj!4v1753622912618!5m2!1sfr!2sbj&t=m"
                 width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
@@ -176,8 +169,11 @@
             <div class="thanks-box">
                 <p class="dons">Faites vos dons aux numéros:+229 0147777941</p>
                 <h1>Merci !</h1>
-                <p class="noms_m"> <span>Camélia AHANHANZO</span> <img src="assets/images/icones/coeur.svg" alt=""
-                        srcset=""> <span>Derick NGOUH</span></p>
+                <p class="noms_m"> <span>Camélia AHANHANZO</span>&
+                    <!-- <img src="assets/images/icones/coeur.svg" alt=""
+                        srcset=""> -->
+                    <span>Derick NGOUH</span>
+                </p>
             </div>
         </section>
 
