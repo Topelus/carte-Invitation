@@ -116,6 +116,7 @@ section.cb1 {
     background-repeat: no-repeat;
     background-blend-mode: multiply;
     background-image: url('../images/nice-bouquet-with-white-pink-flowers.jpg'), linear-gradient(#ffffff, #5e5e5e);
+    /* background-image: url('../images/nice-bouquet-with-white-pink-flowers.jpg'); */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -132,10 +133,18 @@ section.cb1 img {
     /* filter: invert(100%); */
     height: 40px;
     width: auto;
-    filter: invert(100%);
-    /* background-color: blue;
-    background-blend-mode: multiply; */
+    /* box-shadow: 0px 0px 10px rgb(255, 255, 255); */
+    text-shadow: 0px 0px 10px rgb(255, 255, 255);
+    /* filter: invert(100%); */
 }
+
+section.cb1 .event-location:hover img,section.cb1 .event-location:hover a {
+    color: #b9b9b9;
+}
+
+/* section.cb1 img:hover {
+    filter: invert(100%);
+} */
 
 section.cb1 a {
     text-decoration: none;
@@ -143,9 +152,9 @@ section.cb1 a {
     font-size: 1.3rem;
 }
 
-section.cb1 a:hover {
+/* section.cb1 a:hover {
     color: #b9b9b9;
-}
+} */
 
 section.cb1 #confirm-presence {
     width: 100%;
