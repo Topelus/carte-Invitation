@@ -15,58 +15,62 @@ html {
 
 
 /* Fond semi-transparent pour le message */
-    .overlay {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.6);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 1000;
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Boîte du message */
+.message-box {
+    background: white;
+    padding: 25px 35px;
+    border-radius: 12px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.4s ease;
+}
+
+.message-box p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.message-box button {
+    background: #ff5c5c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.message-box button:hover {
+    background: #e64c4c;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
     }
 
-    /* Boîte du message */
-    .message-box {
-      background: white;
-      padding: 25px 35px;
-      border-radius: 12px;
-      text-align: center;
-      font-family: "Poppins", sans-serif;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      animation: fadeIn 0.4s ease;
+    to {
+        opacity: 1;
+        transform: scale(1);
     }
-
-    .message-box p {
-      margin-bottom: 20px;
-      font-size: 1.1rem;
-      color: #333;
-    }
-
-    .message-box button {
-      background: #ff5c5c;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      font-size: 1rem;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .message-box button:hover {
-      background: #e64c4c;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: scale(0.9); }
-      to { opacity: 1; transform: scale(1); }
-    }
-
-
-
-
-
+}
 
 section {
     box-sizing: border-box;
@@ -270,16 +274,6 @@ section.cs3 {
     overflow: hidden;
 }
 
-/* section.cs3::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: url("../images/fleur12.png") center no-repeat;
-    background-size: 90%;
-    opacity: 0.5;
-    z-index: -1;
-} */
-
 section.cs3 .img-deco {
     position: absolute;
     z-index: -1;
@@ -370,11 +364,11 @@ section.cs3 h1 {
 .timeline-content {
     flex: 1;
     padding-left: 40px;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     position: relative;
-    /* color: #FFD700; */
     color: #0b3d2e;
     font-weight: 700;
+    /* white-space: nowrap; */
 }
 
 .timeline-content span {
@@ -414,11 +408,9 @@ section.cs3 h1 {
     top: 50%;
     width: 10px;
     height: 10px;
-    /* background: #FFD700; */
     background: #0b3d2e;
     border-radius: 50%;
     transform: translateY(-50%);
-    /* box-shadow: 0 0 0 4px #0b3d2e, 0 0 0 6px #0b3d2e; */
 }
 
 .timeline-item:nth-child(odd) .timeline-content::before {
@@ -529,6 +521,7 @@ section.cs5 {
     position: relative;
     overflow: hidden;
 }
+
 section.cs5 h1 {
     font-size: 3rem;
     color: #0b3d2e;
@@ -574,7 +567,7 @@ section.cs5 div {
     text-align: center;
     color: #0b3d2e;
     margin: 20px;
-    font-family:sans-serif;
+    font-family: sans-serif;
 }
 
 .guest-name {
@@ -596,6 +589,7 @@ section.cs5 div {
     background-color: #0b3d2e;
     /* background-color: #dbba00; */
 }
+
 .qrcode {
     width: 130px !important;
     height: 130px;
