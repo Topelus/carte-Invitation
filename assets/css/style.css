@@ -600,7 +600,7 @@ section.cs5 div {
 }
 
 .plan-salle svg {
-    width: 50%;
+    width: 80%;
     border-radius: 10px;
     margin-top: 10px;
 }
@@ -638,7 +638,8 @@ section.cs6 .thanks-box {
 section.cs6 .thanks-box h1 {
     font-family: 'Great Vibes';
     font-size: 25vw;
-    color: rgb(70, 70, 70);
+    /* color: rgb(70, 70, 70); */
+    color: #309c80 !important;
     white-space: nowrap;
 }
 
@@ -662,14 +663,17 @@ section.cs6 .thanks-box .dons {
 }
 
 section.cs6 .thanks-box .noms_m {
+    font-family: 'Tangerine', 'Great Vibes';
+    font-size: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-weight: 700;
 }
 
-section.cs6 .thanks-box .noms_m img {
+/* section.cs6 .thanks-box .noms_m img {
     width: 20px;
-}
+} */
 
 /* cs6 fin */
 
@@ -793,6 +797,13 @@ section.cs6 .thanks-box .noms_m img {
         width: 40%;
         transform: rotate(-180deg);
     }
+
+    /* cs5 */
+    .plan-salle svg {
+        width: 50%;
+    }
+
+    /* cs5 fin */
 
     /* cs6 */
     section.cs6 .thanks-box {
