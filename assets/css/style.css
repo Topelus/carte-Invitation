@@ -759,6 +759,10 @@ section.cs6 .thanks-box .noms_m img {
         transform: rotate(-100deg);
     }
 
+    .timeline-content {
+        font-size: 1.8rem;
+    }
+
     .timeline-content span::before {
         width: 140px;
     }
