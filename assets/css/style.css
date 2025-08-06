@@ -202,14 +202,15 @@ section.cb1 .event-location:hover a {
     color: #b9b9b9;
 }
 
-/* section.cb1 img:hover {
-    filter: invert(100%);
-} */
-
 section.cb1 a {
     text-decoration: none;
     color: #ffffff;
-    font-size: 1.3rem;
+    font-size: 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 /* section.cb1 a:hover {
@@ -534,22 +535,20 @@ section.cs5 .f2 {
     position: absolute;
     z-index: -1;
     opacity: 0.5;
+    height: 80%;
 }
 
 
 section.cs5 .f1 {
     left: 0;
-    top: 0;
-    /* width: 100%; */
-    height: 100%;
-    transform: translate(-70%);
+    top: 50%;
+    transform: translate(-90%, -50%);
 }
 
 section.cs5 .f2 {
     right: 0;
-    bottom: 0;
-    height: 100%;
-    transform: translate(70%);
+    top: 50%;
+    transform: translate(90%, -50%);
 }
 
 section.cs5 div {
@@ -668,7 +667,7 @@ section.cs6 .thanks-box .noms_m {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-weight: 700;
+    /* font-weight: 700; */
 }
 
 /* section.cs6 .thanks-box .noms_m img {
@@ -799,6 +798,15 @@ section.cs6 .thanks-box .noms_m {
     }
 
     /* cs5 */
+
+    section.cs5 .f1 {
+        transform: translate(-70%, -50%);
+    }
+
+    section.cs5 .f2 {
+        transform: translate(70%, -50%);
+    }
+
     .plan-salle svg {
         width: 50%;
     }
