@@ -205,7 +205,7 @@ section.cb1 .event-location:hover a {
 section.cb1 a {
     text-decoration: none;
     color: #ffffff;
-    font-size: 1rem;
+    font-size: 1.5rem;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -632,6 +632,7 @@ section.cs6 {
 section.cs6 .thanks-box {
     width: 100%;
     text-align: center;
+    margin-top: 20px;
 }
 
 section.cs6 .thanks-box h1 {
@@ -641,9 +642,6 @@ section.cs6 .thanks-box h1 {
     color: #309c80 !important;
     white-space: nowrap;
 }
-
-/* section.cs6 .dons {
-} */
 
 section.cs6 .thanks-box p {
     /* font-family:'Poppins', sans-serif; */
@@ -658,7 +656,7 @@ section.cs6 .thanks-box .dons {
     border-radius: 20px;
     /* box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.555); */
     margin-bottom: 10px;
-    margin-top: 10px;
+    margin-top: 30px;
 }
 
 section.cs6 .thanks-box .noms_m {
