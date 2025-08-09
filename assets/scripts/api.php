@@ -28,7 +28,7 @@ if ($resultGuest->num_rows === 0) {
 }
 $guest = $resultGuest->fetch_assoc();
 
-$sqlAssign = "SELECT tableId FROM Assignement WHERE guestId = '$guestId'";
+$sqlAssign = "SELECT tableId FROM Assignment WHERE guestId = '$guestId'";
 $resultAssign = $conn->query($sqlAssign);
 if ($resultAssign->num_rows === 0) {
     echo json_encode(["error" => "Aucune table attribuée"]);
