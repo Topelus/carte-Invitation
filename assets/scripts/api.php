@@ -22,6 +22,11 @@ if ($guestId === 0 || $eventId === 0) {
     exit;
 }
 
+// Inclure ton script de connexion
+require __DIR__ . '/assets/scripts/api.php';
+
+echo json_encode(["id" => $id, "eventId" => $eventId]);
+
 // 1. Récupérer les infos du guest
 $sqlGuest = "SELECT fullName, groupSize FROM Guest WHERE id = $guestId AND eventId = $eventId";
 $resultGuest = $conn->query($sqlGuest);
