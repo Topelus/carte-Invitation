@@ -644,19 +644,19 @@
 
 
 
-    // 1. Récupérer le numéro X dans la div
-    const numero = document.getElementById("table-number").textContent.trim();
-    console.log("Numéro de la table:", numero);
+    document.addEventListener("DOMContentLoaded", () => {
+        const numero = document.getElementById("table-number").textContent.trim();
+        console.log("Numéro de la table:", numero);
 
-    // 2. Sélectionner tous les éléments qui ont la classe correspondante "TX"
-    const elements = document.querySelectorAll(".cls-1.T" + numero);
+        // 1. Sélectionner toutes les tables (avec la classe cls-1)  
+        const allTables = document.querySelectorAll(".cls-1");
 
-    // 3. Appliquer un fill rouge à chacun
-    elements.forEach(el => {
-        el.style.fill = "#ffbb00";
-        // el.style.fill = "red";
-        // utilisation de la propriété CSS
-    });
+        // 3. Sélectionner la bonne table et la colorer
+        const elementsToColor = document.querySelectorAll(".cls-1.T" + numero);
+        elementsToColor.forEach(el => {
+            el.style.fill = "#ffbb00"; // couleur surlignée
+             });
+        });
 </script>
 
 </html>
