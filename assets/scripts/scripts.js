@@ -43,6 +43,13 @@ if (guestId && eventId) {
             document.querySelector('.table-name').textContent = data.tableName;
             document.getElementById('table-number').textContent = data.tableNumber;
 
+            // Puis colorer la table en fonction du nouveau numéro
+            const numero = data.tableNumber;  // prends directement la valeur de la réponse JSON
+
+            // Colorer la bonne table
+            const elementsToColor = document.querySelectorAll(".cls-1.T" + numero);
+            elementsToColor.forEach(el => el.style.fill = "#ffbb00");
+
             // Générer le QR code (avec la librairie QRCode.js par exemple)
             new QRCode(document.querySelector('.qrcode'), {
                 text: guestId,
@@ -59,15 +66,3 @@ if (guestId && eventId) {
 }
 
 
-document.addEventListener("DOMContentLoaded", () => {
-// Puis colorer la table en fonction du nouveau numéro
-    const numero = data.tableNumber;  // prends directement la valeur de la réponse JSON
-
-    // Reset couleur
-    const allTables = document.querySelectorAll(".cls-1");
-    allTables.forEach(el => el.style.fill = "");
-
-    // Colorer la bonne table
-    const elementsToColor = document.querySelectorAll(".cls-1.T" + numero);
-    elementsToColor.forEach(el => el.style.fill = "#ffbb00");
-     });
