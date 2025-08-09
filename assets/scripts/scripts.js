@@ -60,15 +60,14 @@ if (guestId && eventId) {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    const numero = document.getElementById("table-number").textContent.trim();
-    console.log("Numéro de la table:", numero);
+// Puis colorer la table en fonction du nouveau numéro
+    const numero = data.tableNumber;  // prends directement la valeur de la réponse JSON
 
-    // 1. Sélectionner toutes les tables (avec la classe cls-1)  
+    // Reset couleur
     const allTables = document.querySelectorAll(".cls-1");
+    allTables.forEach(el => el.style.fill = "");
 
-    // 3. Sélectionner la bonne table et la colorer
+    // Colorer la bonne table
     const elementsToColor = document.querySelectorAll(".cls-1.T" + numero);
-    elementsToColor.forEach(el => {
-        el.style.fill = "#ffbb00"; // couleur surlignée
-    });
-});
+    elementsToColor.forEach(el => el.style.fill = "#ffbb00");
+     });
