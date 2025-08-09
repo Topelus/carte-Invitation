@@ -1,8 +1,7 @@
 <?php
+header("Access-Control-Allow-Origin: *");
 header('Content-Type: application/json');
 
-
-// Connexion BDD
 $servername = getenv("DB_HOST");
 $username   = getenv("DB_USER");
 $password   = getenv("DB_PASS");
@@ -13,55 +12,39 @@ if ($conn->connect_error) {
     die(json_encode(["error" => "Erreur connexion BDD : " . $conn->connect_error]));
 }
 
-// Récupération des paramètres GET
-$guestId = isset($_GET['id']) ? intval($_GET['id']) : 0;
-$eventId = isset($_GET['eventId']) ? intval($_GET['eventId']) : 0;
+$guestId = isset($_GET['id']) ? $conn->real_escape_string($_GET['id']) : '';
+$eventId = isset($_GET['eventId']) ? $conn->real_escape_string($_GET['eventId']) : '';
 
-if ($guestId === 0 || $eventId === 0) {
+if ($guestId === '' || $eventId === '') {
     echo json_encode(["error" => "Paramètres manquants"]);
     exit;
 }
 
-// Inclure ton script de connexion
-require __DIR__ . '/assets/scripts/api.php';
-
-echo json_encode(["id" => $id, "eventId" => $eventId]);
-
-// 1. Récupérer les infos du guest
-$sqlGuest = "SELECT fullName, groupSize FROM Guest WHERE id = $guestId AND eventId = $eventId";
+$sqlGuest = "SELECT fullName, groupSize FROM Guest WHERE id = '$guestId' AND eventId = '$eventId'";
 $resultGuest = $conn->query($sqlGuest);
-
 if ($resultGuest->num_rows === 0) {
     echo json_encode(["error" => "Guest introuvable"]);
     exit;
 }
-
 $guest = $resultGuest->fetch_assoc();
 
-// 2. Récupérer la tableId depuis Assignement
-$sqlAssign = "SELECT tableId FROM Assignement WHERE guestId = $guestId";
+$sqlAssign = "SELECT tableId FROM Assignement WHERE guestId = '$guestId'";
 $resultAssign = $conn->query($sqlAssign);
-
 if ($resultAssign->num_rows === 0) {
     echo json_encode(["error" => "Aucune table attribuée"]);
     exit;
 }
-
 $assign = $resultAssign->fetch_assoc();
-$tableId = intval($assign['tableId']);
+$tableId = $assign['tableId'];
 
-// 3. Récupérer codeName et number depuis Table
-$sqlTable = "SELECT codeName, number FROM Table WHERE id = $tableId";
+$sqlTable = "SELECT codeName, number FROM Table WHERE id = '$tableId'";
 $resultTable = $conn->query($sqlTable);
-
 if ($resultTable->num_rows === 0) {
     echo json_encode(["error" => "Table introuvable"]);
     exit;
 }
-
 $table = $resultTable->fetch_assoc();
 
-// 4. Réponse finale
 $response = [
     "fullName"   => $guest['fullName'],
     "groupSize"  => $guest['groupSize'],
@@ -70,6 +53,5 @@ $response = [
 ];
 
 echo json_encode($response);
-
 $conn->close();
 ?>

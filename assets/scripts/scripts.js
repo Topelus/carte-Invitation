@@ -1,35 +1,36 @@
-
 function getQueryParam(param) {
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get(param);
+  const params = new URLSearchParams(window.location.search);
+  return params.get(param);
 }
 
-const guestId = getQueryParam("id");
-const eventId = getQueryParam("eventId");
+const guestId = getQueryParam('id');
+const eventId = getQueryParam('eventId');
 
-fetch(`api.php?id=${guestId}&eventId=${eventId}`)
-    .then(res => res.json())
+if (guestId && eventId) {
+  fetch(`https://carte-invitation.onrender.com/assets/scripts/api.php?id=${encodeURIComponent(guestId)}&eventId=${encodeURIComponent(eventId)}`)
+    .then(response => response.json())
     .then(data => {
-        if (data.error) {
-            document.querySelector(".guest-name").textContent = data.error;
-            return;
-        }
+      if (data.error) {
+        document.querySelector('.guest-name').textContent = data.error;
+        return;
+      }
+      // Affiche les infos dans la page
+      document.querySelector('.guest-name').textContent = data.fullName;
+      document.querySelector('.group-size').textContent = data.groupSize > 1 ? `Nombre de personnes : ${data.groupSize}` : "Seul(e)";
+      document.querySelector('.table-name').textContent = data.tableName;
+      document.getElementById('table-number').textContent = data.tableNumber;
 
-        document.querySelector(".guest-name").textContent = data.fullName;
-        if (data.groupSize > 1) {
-            document.querySelector(".guest-name").textContent += ` (+${data.groupSize - 1})`;
-        }
-        document.querySelector(".table-name").textContent = data.tableName;
-        document.getElementById("table-number").textContent = data.tableNumber;
-
-        // Génération du QR code avec l'id du guest
-        new QRCode(document.querySelector(".qrcode"), {
-            text: guestId,
-            width: 128,
-            height: 128
-        });
+      // Générer le QR code (avec la librairie QRCode.js par exemple)
+      new QRCode(document.querySelector('.qrcode'), {
+        text: guestId,
+        width: 128,
+        height: 128,
+      });
     })
     .catch(err => {
-        console.error(err);
-        // document.querySelector(".guest-name").textContent = "Erreur de chargement.";
+      document.querySelector('.guest-name').textContent = "Erreur lors du chargement.";
+      console.error(err);
     });
+} else {
+  document.querySelector('.guest-name').textContent = "Paramètres manquants dans l’URL.";
+}
