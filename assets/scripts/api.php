@@ -14,7 +14,7 @@ if ($conn->connect_error) {
     exit;
 }
 
-$result = $conn->query("SELECT * FROM ma_table");
+$result = $conn->query("SELECT * FROM Guest");
 $data = [];
 
 while ($row = $result->fetch_assoc()) {
