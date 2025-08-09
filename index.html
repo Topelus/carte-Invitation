@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500;700&display=swap"
         rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 
     <title>Carte d'invitation </title>
 </head>
@@ -121,32 +122,28 @@
                 <div><img src="assets/images/icones/dinner_312585.png" alt="" srcset="">
                     <p> Résistance </p>
                     <div style="display: flex; gap: 10px;">
-                    <div class="menu_plats" style="border-right: #0b3d2e 1px solid; padding-right: 10px;">Bgoman en sauce garnie <br>
+                        <div class="menu_plats" style="border-right: #0b3d2e 1px solid; padding-right: 10px;">Bgoman en
+                            sauce garnie <br>
+                            Carpe d'eau douce braisée <br>
+                            Gigot d'agneau braisée <br>
+                            Poulet rôti <br>
+                            Sauce mouton gbota <br>
+                            N'dole
+                        </div>
 
-                        Carpe d'eau douce braisée <br>
-
-                        Gigot d'agneau braisée <br>
-
-                        Poulet rôti <br>
-
-                        Sauce mouton gbota
+                        <div class="menu_plats">Variétés de riz <br>
+                            Télibo <br>
+                            Ablo <br>
+                            Akassa <br>
+                            Légumes sautés <br>
+                            bâton de manioc/ bananes frites<br>
+                        </div>
                     </div>
-
-                    <div class="menu_plats">Variétés de riz <br>
-
-                        Télibo <br>
-
-                        Ablo <br>
-
-                        Akassa <br>
-
-                        Légumes sautés
-                    </div></div>
                 </div>
                 <div><img src="assets/images/icones/cake_721886.png" alt="" srcset="">
                     <p> Desserts</p>
                     <div class="menu_plats">Fruits de saison <br>
-                        Gâteau de mariage
+                        Thé et café
                     </div>
                 </div>
 
@@ -566,11 +563,22 @@
                 </svg>
 
             </div>
-            <div class="table-info">
+            <!-- <div class="table-info">
                 <div class="guest-name">Élise Dupont</div>
+                <div class="table-name" id="table-nuame">Joie</div>
                 <div class="table-number" id="table-number">7</div>
                 <div class="qrcode"></div>
+            </div> -->
+            <div class="guest-card">
+                <div class="guest-name">Élise Dupont</div>
+                <p class="group-size">2 personnes</p>
+                <div class="table-info">
+                    <p><strong>Table :</strong> <span class="table-name">Joie</span></p>
+                    <p><span id="table-number">7</span></p>
+                </div>
+                <div class="qrcode"></div>
             </div>
+
 
         </section>
 
@@ -594,6 +602,16 @@
                 </p>
             </div>
         </section>
+
+        <footer style="text-align: center; padding: 10px; font-size: 14px; color: #777;">
+            &copy; <span id="year"></span> Stridemaximpact. Tous droits réservés.
+        </footer>
+
+        <script>
+            // Met automatiquement l'année en cours
+            document.getElementById("year").textContent = new Date().getFullYear();
+        </script>
+
 
     </div>
 
@@ -638,5 +656,6 @@
         // utilisation de la propriété CSS
     });
 </script>
+<script src="assets/scripts/scripts.js"></script>
 
 </html>

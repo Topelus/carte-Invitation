@@ -571,8 +571,10 @@ section.cs5 div {
     flex-direction: column;
 }
 
+
+
+
 .table-info {
-    padding: 20px;
     border-radius: 15px;
     text-align: center;
     color: #0b3d2e;
@@ -584,9 +586,15 @@ section.cs5 div {
     font-size: 1.4rem;
     font-weight: 700;
     margin-bottom: 8px;
+    color: #0b3d2e;
+}
+.table-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #0b3d2e;
 }
 
-.table-number {
+#table-number {
     font-size: 24px;
     font-weight: bold;
     color: #ffffff;
@@ -608,6 +616,22 @@ section.cs5 div {
     border-radius: 10px;
     /* border:1px solid #0b3d2e; */
 }
+
+.guest-card {
+    max-width: 320px;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+
+.guest-card p {
+    margin: 5px 0;
+    color: #555;
+}
+
+
+
 
 .plan-salle svg {
     width: 80%;
