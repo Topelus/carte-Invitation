@@ -618,45 +618,5 @@
 </body>
 
 <script src="assets/scripts/scripts.js"></script>
-<script>
-    // Fonction pour fermer le message
-    function closeWarning() {
-        document.getElementById("warning").style.display = "none";
-    }
-
-    // Affiche le message après chargement de la page
-    window.onload = () => {
-        document.getElementById("warning").style.display = "flex";
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, {
-        threshold: 0.2
-    });
-
-    const items = document.querySelectorAll('section');
-    items.forEach(item => observer.observe(item));
-
-
-
-    document.addEventListener("DOMContentLoaded", () => {
-        const numero = document.getElementById("table-number").textContent.trim();
-        console.log("Numéro de la table:", numero);
-
-        // 1. Sélectionner toutes les tables (avec la classe cls-1)  
-        const allTables = document.querySelectorAll(".cls-1");
-
-        // 3. Sélectionner la bonne table et la colorer
-        const elementsToColor = document.querySelectorAll(".cls-1.T" + numero);
-        elementsToColor.forEach(el => {
-            el.style.fill = "#ffbb00"; // couleur surlignée
-             });
-        });
-</script>
 
 </html>
