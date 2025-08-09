@@ -1,11 +1,12 @@
 <?php
 header('Content-Type: application/json');
 
-// Connexion à la BDD distante
-$servername = "hote-bdd";
-$username = "utilisateur";
-$password = "motdepasse";
-$dbname = "nom_base";
+
+// Connexion BDD
+$servername = getenv("DB_HOST");
+$username   = getenv("DB_USER");
+$password   = getenv("DB_PASS");
+$dbname     = getenv("DB_NAME");
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
