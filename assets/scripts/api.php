@@ -37,7 +37,7 @@ if ($resultAssign->num_rows === 0) {
 $assign = $resultAssign->fetch_assoc();
 $tableId = $assign['tableId'];
 
-$sqlTable = "SELECT codeName, number FROM Table WHERE id = '$tableId'";
+$sqlTable = "SELECT codeName, number FROM `Table` WHERE id = '$tableId'";
 $resultTable = $conn->query($sqlTable);
 if ($resultTable->num_rows === 0) {
     echo json_encode(["error" => "Table introuvable"]);
