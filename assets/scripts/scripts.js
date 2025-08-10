@@ -62,7 +62,7 @@ if (guestId && eventId) {
             console.error(err);
         });
 } else {
-    document.querySelector('.guest-name').textContent = "Paramètres manquants dans l’URL.";
+    document.querySelector('.guest-name').textContent = "Elise Dupont";
 }
 
 
