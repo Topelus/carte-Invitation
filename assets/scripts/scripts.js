@@ -39,7 +39,7 @@ if (guestId && eventId) {
             }
             // Affiche les infos dans la page
             document.querySelector('.guest-name').textContent = data.fullName;
-            document.querySelector('.group-size').textContent = data.groupSize > 1 ? `Nombre de personnes : ${data.groupSize}` : "Seul(e)";
+            document.querySelector('.group-size').textContent = data.groupSize > 1 ? `Valable pour ${data.groupSize} personnes` : "Valable pour une personnes";
             document.querySelector('.table-name').textContent = data.tableName;
             document.getElementById('table-number').textContent = data.tableNumber;
 

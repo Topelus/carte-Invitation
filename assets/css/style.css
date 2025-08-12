@@ -490,6 +490,7 @@ section.cs4 h1 {
     align-items: top;
     flex-direction: column;
     font-weight: 700;
+    gap: 10px;
 }
 
 .menu-wrapper>div {
@@ -570,9 +571,6 @@ section.cs5 div {
     align-items: center;
     flex-direction: column;
 }
-
-
-
 
 .table-info {
     border-radius: 15px;
