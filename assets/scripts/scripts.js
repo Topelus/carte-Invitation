@@ -43,12 +43,14 @@ if (guestId && eventId) {
             document.querySelector('.table-name').textContent = data.tableName;
             document.getElementById('table-number').textContent = data.tableNumber;
 
-            // Puis colorer la table en fonction du nouveau numéro
-            const numero = data.tableNumber;  // prends directement la valeur de la réponse JSON
+            // // Puis colorer la table en fonction du nouveau numéro
+            // const numero = data.tableNumber;  // prends directement la valeur de la réponse JSON
 
-            // Colorer la bonne table
-            const elementsToColor = document.querySelectorAll(".cls-1.T" + numero);
-            elementsToColor.forEach(el => el.style.fill = "#ffbb00");
+            // // Colorer la bonne table
+            // const elementsToColor = document.querySelectorAll(".cls-1.T" + numero);
+            // const tableNumber = document.querySelectorAll(".cls-3.T" + numero);
+            // elementsToColor.forEach(el => el.style.fill = "#ffbb00");
+            //tableNumber.forEach(tn => {tn.style.fill = "#cf6400";});
 
             // Générer le QR code (avec la librairie QRCode.js par exemple)
             new QRCode(document.querySelector('.qrcode'), {
